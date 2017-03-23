@@ -27,6 +27,9 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         calendarButton.setOnClickListener(this);
         Button alarmButton = (Button) findViewById(R.id.AlarmButton);
         alarmButton.setOnClickListener(this);
+
+        FloatingActionButton theFab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        theFab.setOnClickListener(this);
     }
     // Capture button clicks
     public void onClick(View clicked) {
@@ -51,6 +54,10 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
                 startActivity(alarmIntent);
                 break;
 
+            //Floating Action Button Click
+            case R.id.floatingActionButton:
+                //Expand FAB
+                //Intent fabIntent = new Intent()
             default:
                 break;
         }
