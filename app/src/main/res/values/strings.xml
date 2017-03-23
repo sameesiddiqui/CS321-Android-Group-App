@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Iris - Morning Assistant</string>
+    <string name="weather">This is the page for the weather.</string>
+    <string name="weatherButton">Weather</string>
+    <string name="calendarButton">Calendar</string>
+    <string name="alarmButton">Alarm</string>
+    <string name="calendar">This is the page for the calendar.</string>
+    <string name="alarm">This is the page for the alarm.</string>
+    <string name="menu_settings">Settings</string>
+    <string name="Button">Button</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
