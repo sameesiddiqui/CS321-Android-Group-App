@@ -86,6 +86,8 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplication(), "Floating Action Button 1", Toast.LENGTH_SHORT).show();
+                Intent newAlarm = new Intent(HomeScreen.this, newAlarm.class);
+                startActivity(newAlarm);
             }
         });
 
@@ -93,6 +95,8 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplication(), "Floating Action Button 2", Toast.LENGTH_SHORT).show();
+                Intent newCalEvent = new Intent(HomeScreen.this, newCalEvent.class);
+                startActivity(newCalEvent);
             }
         });
 
@@ -100,6 +104,8 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplication(), "Floating Action Button 3", Toast.LENGTH_SHORT).show();
+                Intent settings = new Intent(HomeScreen.this, SettingsActivity.class);
+                startActivity(settings);
             }
         });
     }
@@ -125,6 +131,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
                 Intent alarmIntent = new Intent(HomeScreen.this, AlarmActivity.class);
                 startActivity(alarmIntent);
                 break;
+
 
             default:
                 break;

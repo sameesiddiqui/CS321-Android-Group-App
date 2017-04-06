@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
-    <android.support.design.widget.CoordinatorLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/coordinatorLayout">
+        <Button
+            android:id="@+id/WeatherButton"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top"
+            android:text="@string/weatherButton" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@android:drawable/ic_menu_help"
-            />
-        <include layout="@layout/fab_layout" />
-    </android.support.design.widget.CoordinatorLayout>
+        <Button
+            android:id="@+id/CalendarButton"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/WeatherButton"
+            android:layout_gravity="center"
+            android:text="@string/calendarButton" />
 
-    <Button
-        android:id="@+id/WeatherButton"
+        <Button
+            android:id="@+id/AlarmButton"
+            android:layout_width="match_parent"
+            android:layout_height="139dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/CalendarButton"
+            android:layout_gravity="bottom"
+            android:text="@string/alarmButton" />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:text="@string/weatherButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_add"
+        app:backgroundTint="@color/colorFAB" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:text="@string/calendarButton"
-        android:id="@+id/CalendarButton"
-        android:layout_below="@+id/WeatherButton"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/fab_layout" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:text="@string/alarmButton"
-        android:id="@+id/AlarmButton"
-        android:layout_below="@+id/CalendarButton"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
 
-    <include layout="@layout/fab_layout" />
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
