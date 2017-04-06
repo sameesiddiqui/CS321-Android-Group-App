@@ -11,18 +11,14 @@
         android:layout_height="match_parent">
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="61dp"
-            android:layout_height="57dp"
-            android:layout_below="@+id/AlarmButton"
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:clickable="true"
-            app:backgroundTint="@android:color/background_light"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_add_circle_outline_black_24dp" />
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_menu_help"
+            />
+        <include layout="@layout/fab_layout" />
     </android.support.design.widget.CoordinatorLayout>
 
     <Button
@@ -52,5 +48,5 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
-
+    <include layout="@layout/fab_layout" />
 </RelativeLayout>
