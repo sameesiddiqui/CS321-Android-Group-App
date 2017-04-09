@@ -33,9 +33,9 @@ public class AlarmActivity extends AppCompatActivity
         {
             Toast.makeText(AlarmActivity.this, "ALARM ON", Toast.LENGTH_SHORT).show();
             Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getCurrentHour());
-            calendar.set(Calendar.MINUTE, alarmTimePicker.getCurrentMinute());
-            Intent intent = new Intent(this, AlarmReceiver.class);
+            calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getHour());
+            calendar.set(Calendar.MINUTE, alarmTimePicker.getMinute());
+            Intent intent = new Intent(this, Alarm_Receiver.class);
             pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
 
             time=(calendar.getTimeInMillis()-(calendar.getTimeInMillis()%60000));
