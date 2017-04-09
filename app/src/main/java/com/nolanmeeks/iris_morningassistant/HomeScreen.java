@@ -52,8 +52,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
     Animation hide_fab_2;
     Animation show_fab_3;
     Animation hide_fab_3;
-    Animation rotate_fab;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,7 +86,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         hide_fab_2 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab2_hide);
         show_fab_3 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab3_show);
         hide_fab_3 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab3_hide);
-        rotate_fab = AnimationUtils.loadAnimation(getApplication(), R.anim.fab_rotate);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,15 +161,11 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
     }
     private void expandFAB() {
 
-        //Main Floating Action Button
-        fab.startAnimation(rotate_fab);
-        fab.setClickable(true);
-
         //Floating Action Button 1
-        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) fab1.getLayoutParams();
-        layoutParams1.rightMargin += (int) (fab1.getWidth() * 1.7);
-        layoutParams1.bottomMargin += (int) (fab1.getHeight() * 0.25);
-        fab1.setLayoutParams(layoutParams1);
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
+        layoutParams.rightMargin += (int) (fab1.getWidth() * 1.7);
+        layoutParams.bottomMargin += (int) (fab1.getHeight() * 0.25);
+        fab1.setLayoutParams(layoutParams);
         fab1.startAnimation(show_fab_1);
         fab1.setClickable(true);
 
@@ -194,10 +188,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
 
     private void hideFAB() {
-
-        //Main Floating Action Button
-        fab.startAnimation(rotate_fab);
-        fab.setClickable(true);
 
         //Floating Action Button 1
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) fab1.getLayoutParams();
